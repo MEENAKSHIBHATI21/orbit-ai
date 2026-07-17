@@ -1,0 +1,65 @@
+# What is a Satellite?
+    A satellite is any object that orbits (revolves around) another, larger object due to gravity.
+
+    There are two main types:
+
+    Natural satellites – These occur naturally in space.
+    Example: Earth's Moon is a natural satellite because it orbits Earth.
+
+    Artificial satellites – These are human-made objects launched into space.
+    They orbit Earth or other planets and are used for purposes such as:
+        Communication (TV, phone, internet)
+        Weather forecasting
+        Navigation (such as GPS)
+        Scientific research
+        Earth observation and mapping
+
+
+# What is space debris?
+    Space debris (also called space junk) is any non-functional, human-made object left in space, especially in Earth's orbit.
+    Even very small pieces of debris travel at extremely high speeds (around 28,000 km/h or 17,500 mph) in low Earth orbit. At these speeds, 
+    even a tiny fragment can:
+    
+    Damage or destroy satellites
+    Endanger astronauts and spacecraft
+    Create even more debris through collisions (called the Kessler syndrome)
+
+
+# Types of Earth orbits
+    Low Earth Orbit (LEO): About 160–2,000 km above Earth. Used by the International Space Station and many Earth-observation satellites.
+   
+    Medium Earth Orbit (MEO): About 2,000–35,786 km. Used by navigation satellites like GPS.
+    
+    Geostationary Orbit (GEO): About 35,786 km above the equator. Satellites here appear fixed over one point on Earth and are 
+    commonly used for communication and weather monitoring.
+
+# A TLE (Two-Line Element) file 
+    is a text file that contains the orbital parameters of an Earth-orbiting satellite. These parameters are used to  calculate the satellite's position and predict where it will be at any time.
+    Each satellite's orbital data is stored in two lines of text (plus an optional name line).
+
+    ISS (ZARYA)
+    1 25544U 98067A   26198.50000000  .00016717  00000-0  10270-3 0  9993
+    2 25544  51.6400 123.4567 0003456 234.5678 125.4321 15.50012345678901
+
+    Line 1: Satellite identification and other orbital information
+    Line 2: Orbital elements
+
+# A TLE includes important orbital parameters such as:
+
+    Satellite number
+    Epoch (date and time the data is valid)
+    Inclination (tilt of the orbit)
+    Right Ascension of the Ascending Node (RAAN)
+    Eccentricity (shape of the orbit)
+    Argument of Perigee
+    Mean Anomaly
+    Mean Motion (number of orbits per day)
+
+# TLE files are used to:
+
+    Predict a satellite's position.
+    Track satellites from Earth.
+    Plan satellite observations.
+    Avoid collisions in space.
+    Simulate satellite orbits.
+
