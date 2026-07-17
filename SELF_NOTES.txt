@@ -70,3 +70,15 @@ git add .
 git commit -m "Describe what you changed"
 git push
 
+#SGP4 - library to do calculations on tle
+#plotly - interactive visualization
+
+
+#The Earth is simply a sphere.
+
+Its mathematical equation is
+
+x² + y² + z² = r²
+
+
+#
