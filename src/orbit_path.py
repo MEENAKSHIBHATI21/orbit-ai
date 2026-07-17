@@ -95,27 +95,74 @@ fig.add_trace(
         name="Orbit"
     )
 )
-
-# ------------------------
-# Draw ISS (current position)
-# ------------------------
-
 fig.add_trace(
     go.Scatter3d(
         x=[x_points[0]],
         y=[y_points[0]],
         z=[z_points[0]],
         mode="markers",
-        marker=dict(size=6),
+        marker=dict(size=6, color="red"),
         name=name
     )
 )
+
+frames = []
+
+for i in range(len(x_points)):
+    frames.append(
+        go.Frame(
+            data=[
+                go.Scatter3d(
+                    x=x_points,
+                    y=y_points,
+                    z=z_points,
+                    mode="lines",
+                    line=dict(width=4),
+                    name="Orbit"
+                ),
+                go.Scatter3d(
+                    x=[x_points[i]],
+                    y=[y_points[i]],
+                    z=[z_points[i]],
+                    mode="markers",
+                    marker=dict(size=6, color="red"),
+                    name=name
+                )
+            ],
+            name=str(i)
+        )
+    )
+
+fig.frames = frames
+# ------------------------
+# Draw ISS (current position)
+# ------------------------
+
+
 
 fig.update_layout(
     title="ISS Orbit Around Earth",
     scene=dict(
         aspectmode="data"
-    )
+    ),
+    updatemenus=[
+        dict(
+            type="buttons",
+            buttons=[
+                dict(
+                    label="▶ Play",
+                    method="animate",
+                    args=[
+                        None,
+                        {
+                            "frame": {"duration": 40, "redraw": True},
+                            "fromcurrent": True
+                        }
+                    ]
+                )
+            ]
+        )
+    ]
 )
 
 fig.show()
