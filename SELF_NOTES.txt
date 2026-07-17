@@ -63,3 +63,10 @@
     Avoid collisions in space.
     Simulate satellite orbits.
 
+
+#GIT WORKFLOW
+git status
+git add .
+git commit -m "Describe what you changed"
+git push
+
